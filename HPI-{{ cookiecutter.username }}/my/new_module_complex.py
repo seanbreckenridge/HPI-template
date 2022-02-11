@@ -45,7 +45,7 @@ class Result(NamedTuple):
 Results = Iterator[Result]
 
 
-# cache refreshes whenever items in inputs() changes; pass logger to cachew
+# cache refreshes whenever items are added/removed from inputs(); pass logger to cachew
 @mcachew(depends_on=lambda: [str(f) for f in inputs()], logger=logger)
 def results() -> Results:
     for file in inputs():
