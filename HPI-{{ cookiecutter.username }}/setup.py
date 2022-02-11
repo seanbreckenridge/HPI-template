@@ -18,6 +18,8 @@ def main() -> None:
         author="{{ cookiecutter.username }}",
         license="MIT",
         packages=list(subpackages()),
+        # reminder: should use mypy's --namespace-packages flag
+        # when importing from my/ so it can discover the py.typed properly
         package_data={"my": ["py.typed"]},
         zip_safe=False,
         python_requires=">=3.7",
