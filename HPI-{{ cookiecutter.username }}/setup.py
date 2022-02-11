@@ -10,6 +10,7 @@ def subpackages() -> Iterator[str]:
 
 
 def main() -> None:
+    # use a unique name, so that egg-link installs have unique filepaths
     pkg = "HPI-{{ cookiecutter.username }}"
     setup(
         name=pkg,
