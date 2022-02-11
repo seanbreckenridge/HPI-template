@@ -18,7 +18,7 @@ def main() -> None:
         author="{{ cookiecutter.username }}",
         license="MIT",
         packages=list(subpackages()),
-        package_data={pkg: ["py.typed"]},
+        package_data={"my": ["py.typed"]},
         zip_safe=False,
         python_requires=">=3.7",
         install_requires=[],
