@@ -10,7 +10,7 @@ You may not need all of this for every module; this includes:
 """
 
 # TODO: uncomment this once you've defined something in your config file
-# from my.config import my_new_module as user_config
+# from my.config import new_module_complex as user_config
 
 from typing import Sequence, Iterator, NamedTuple
 
