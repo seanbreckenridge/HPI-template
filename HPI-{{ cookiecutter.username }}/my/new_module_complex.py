@@ -44,6 +44,7 @@ class Result(NamedTuple):
 # shorthand variable for the output of this module
 Results = Iterator[Result]
 
+# can use 'hpi --debug query my.new_module_complex' to test
 
 # cache refreshes whenever items are added/removed from inputs(); pass logger to cachew
 @mcachew(depends_on=lambda: [str(f) for f in inputs()], logger=logger)
