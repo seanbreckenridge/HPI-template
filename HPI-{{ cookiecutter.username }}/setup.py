@@ -14,7 +14,6 @@ def main() -> None:
     pkg = "HPI-{{ cookiecutter.username }}"
     setup(
         name=pkg,
-        version="0.1.0",
         author="{{ cookiecutter.username }}",
         license="MIT",
         packages=list(subpackages()),
