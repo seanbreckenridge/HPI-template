@@ -17,6 +17,7 @@ from typing import Sequence, Iterator, NamedTuple
 from my.core import dataclass, Paths, Path, get_files, LazyLogger
 from my.core.common import mcachew
 
+
 # stub example config, can remove this if you add something to 'my.config'
 class user_config:
     export_path: Paths = "~/Downloads/*"
@@ -45,6 +46,7 @@ class Result(NamedTuple):
 Results = Iterator[Result]
 
 # can use 'hpi --debug query my.new_module_complex' to test
+
 
 # cache refreshes whenever items are added/removed from inputs(); pass logger to cachew
 @mcachew(depends_on=lambda: [str(f) for f in inputs()], logger=logger)

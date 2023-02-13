@@ -14,6 +14,7 @@ from pathlib import Path
 
 # can use 'hpi query my.new_module_simple' to test
 
+
 def results() -> Iterator[float]:
     # get modification time
     for f in Path("~/Downloads").expanduser().glob("*"):
