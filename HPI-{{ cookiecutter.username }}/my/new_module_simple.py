@@ -1,5 +1,5 @@
 """
-An basic example of a new module. If this is just a personal
+A basic example of a new module. If this is just a personal
 module, you might be fine hardcoding inputs or not using caching
 
 These no requirement to import anything from my.core, it just has
