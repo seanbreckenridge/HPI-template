@@ -10,18 +10,14 @@ def subpackages() -> Iterator[str]:
 
 
 def main() -> None:
-    # use a unique name, so that egg-link installs have unique filepaths
-    pkg = "HPI-{{ cookiecutter.username }}"
     setup(
-        name=pkg,
-        author="{{ cookiecutter.username }}",
-        license="MIT",
+        # use a unique name, so that egg-link installs have unique filepaths
+        name="HPI-{{ cookiecutter.username }}",
         packages=list(subpackages()),
         # reminder: should use mypy's --namespace-packages flag
         # when importing from my/ so it can discover the py.typed properly
         package_data={"my": ["py.typed"]},
-        zip_safe=False,
-        python_requires=">=3.7",
+        # dependencies
         install_requires=[],
         extras_require={
             "testing": [
