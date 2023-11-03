@@ -14,7 +14,7 @@ You may not need all of this for every module; this includes:
 
 from typing import Sequence, Iterator, NamedTuple
 
-from my.core import dataclass, Paths, Path, get_files, LazyLogger
+from my.core import dataclass, Paths, Path, get_files, make_logger
 from my.core.common import mcachew
 
 
@@ -23,7 +23,7 @@ class user_config:
     export_path: Paths = "~/Downloads/*"
 
 
-logger = LazyLogger(__name__, level="info")
+logger = make_logger(__name__, level="info")
 
 
 @dataclass
